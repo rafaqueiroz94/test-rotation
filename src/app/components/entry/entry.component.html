@@ -1,0 +1,16 @@
+
+<div>
+    <p-card header="Entrada" [style]="{width: '400px'}" styleClass="p-card-shadow">
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText [(ngModel)]="value" /> 
+            <label for="float-input">1,2,3,4</label>
+        </span>
+        <ng-template pTemplate="footer">
+            <button (click)="navigate()" pButton type="button" icon="pi pi-spin pi-th-large" iconPos="left" label="Rotacionar" class="p-button-success"></button>
+        </ng-template>
+    </p-card>
+</div>
+
+
+
+

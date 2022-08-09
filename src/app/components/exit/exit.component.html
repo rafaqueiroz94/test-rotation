@@ -1,0 +1,39 @@
+<p-card header="Saida" [style]="{width: '500px'}" styleClass="p-card-shadow">
+    <div>
+        <h5>Tabela Original</h5>
+    <div id="body-static" class="table123">
+    </div>
+    <h4>Tabela Rotacionada</h4>
+    <div id="body-rotation" class="table123"></div>
+    </div>
+    <div *ngIf="error">
+        <label>O valor inserido não é válido!</label>
+    </div>
+
+
+    <!-- <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <h4>Tabela Rotacionada</h4>
+    <table >
+        <tr>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+    </table> -->
+    <ng-template pTemplate="footer">
+        <p-button (click)="navigateBack()" label="Voltar" icon="pi pi-arrow-left" styleClass="p-button-success" [style]="{'margin-left': '.5em'}"></p-button>
+    </ng-template>
+</p-card>
+
