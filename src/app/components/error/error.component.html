@@ -1,13 +1,13 @@
 <p-card header="Saida" [style]="{width: '500px'}" styleClass="p-card-shadow">
-    <div  class="bodyCard">
-        <h5>Tabela Original</h5>
-        <div id="body-static" ></div>
-
-        <h4>Tabela Rotacionada</h4>
-        <div id="body-rotation" ></div>
+    <div>
+        <h3>O valor inserido não é válido!</h3>
+        <p>{{tipsText}}</p>
     </div>
 
     <ng-template pTemplate="footer">
         <p-button (click)="navigateBack()" label="Voltar" icon="pi pi-arrow-left" styleClass="p-button-success" [style]="{'margin-left': '.5em'}"></p-button>
     </ng-template>
 </p-card>
+
+
+

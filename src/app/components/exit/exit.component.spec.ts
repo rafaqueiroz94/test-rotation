@@ -23,51 +23,51 @@ describe('ExitComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
 
-  it('should call the method validate value quantity', () => {
-    spyOn(component, 'checkLength');
+  // it('should call the method validate value quantity', () => {
+  //   spyOn(component, 'checkLength');
 
-    component.buildTableStatic(['1', '2', '3', '4']);
-    expect(component.checkLength).toHaveBeenCalled();
-  });
+  //   component.buildTableStatic(['1', '2', '3', '4']);
+  //   expect(component.checkLength).toHaveBeenCalled();
+  // });
 
-  it('should call the method that creates rows and columns', () => {
-    spyOn(component, 'createRowAndColumnDOM');
+  // it('should call the method that creates rows and columns', () => {
+  //   spyOn(component, 'createRowAndColumnDOM');
 
-    component.buildTableStatic(['1', '2', '3', '4']);
-    expect(component.createRowAndColumnDOM).toHaveBeenCalled();
-  });
+  //   component.buildTableStatic(['1', '2', '3', '4']);
+  //   expect(component.createRowAndColumnDOM).toHaveBeenCalled();
+  // });
 
-  it('should 4', () => {
-    spyOn(component, 'createRowAndColumnDOM');
+  // it('should 4', () => {
+  //   spyOn(component, 'createRowAndColumnDOM');
 
-    component.buildTableRotation(['1', '2', '3', '4']);
-    expect(component.createRowAndColumnDOM).toHaveBeenCalled();
-  });
+  //   component.buildTableRotation(['1', '2', '3', '4']);
+  //   expect(component.createRowAndColumnDOM).toHaveBeenCalled();
+  // });
 
-  it('should 6', () => {
-    spyOn(component, 'createRowAndColumnDOM');
+  // it('should 6', () => {
+  //   spyOn(component, 'createRowAndColumnDOM');
 
-    component.buildTableRotation(['1', '2', '3', '4', '5', '6']);
-    expect(component.createRowAndColumnDOM).toHaveBeenCalled();
-  });
+  //   component.buildTableRotation(['1', '2', '3', '4', '5', '6']);
+  //   expect(component.createRowAndColumnDOM).toHaveBeenCalled();
+  // });
 
-  it('should 8', () => {
-    spyOn(component, 'createRowAndColumnDOM');
+  // it('should 8', () => {
+  //   spyOn(component, 'createRowAndColumnDOM');
 
-    component.buildTableRotation(['1', '2', '3', '4', '5', '6', '7', '8']);
-    expect(component.createRowAndColumnDOM).toHaveBeenCalled();
-  });
+  //   component.buildTableRotation(['1', '2', '3', '4', '5', '6', '7', '8']);
+  //   expect(component.createRowAndColumnDOM).toHaveBeenCalled();
+  // });
 
-  it('should 9', () => {
-    spyOn(component, 'createRowAndColumnDOM');
+  // it('should 9', () => {
+  //   spyOn(component, 'createRowAndColumnDOM');
 
-    component.buildTableRotation(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
-    expect(component.createRowAndColumnDOM).toHaveBeenCalled();
-  });
+  //   component.buildTableRotation(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+  //   expect(component.createRowAndColumnDOM).toHaveBeenCalled();
+  // });
 
 
 });

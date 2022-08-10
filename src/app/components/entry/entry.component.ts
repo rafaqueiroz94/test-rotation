@@ -9,7 +9,7 @@ import { SharedDataService } from 'src/app/service/shared-data.service';
 })
 export class EntryComponent implements OnInit {
 
-  value: string = '';
+  value!: string;
 
   constructor(private router: Router, private sharedDataService: SharedDataService) { }
 
@@ -17,6 +17,9 @@ export class EntryComponent implements OnInit {
   }
 
   navigate() {
+    if(this.value == undefined){
+      this.router.navigate(['/error']) 
+    }  
     this.saveData();
     this.router.navigate(['/exit']) 
   }

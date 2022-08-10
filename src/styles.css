@@ -1,3 +1,15 @@
 .background{
     background-color: #55555521;
 }
+table{
+    border: 2px double black;
+    padding: 6px;
+    width: auto;
+    height: auto;
+}
+
+td {
+    border: 1px solid;
+    padding: 10px;
+}
+

@@ -9,6 +9,7 @@ import {InputMaskModule} from 'primeng/inputmask';
 import { CardModule, } from 'primeng/card';
 import { ExitComponent } from './components/exit/exit.component';
 import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './components/error/error.component';
 
 
 
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     EntryComponent,
-    ExitComponent
+    ExitComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

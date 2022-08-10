@@ -13,6 +13,8 @@ export class ExitComponent implements OnInit {
   rotation: string[] = [];
   error: boolean = false;
 
+  
+
   constructor(private router: Router, private sharedDataService: SharedDataService) { }
 
   ngOnInit(): void {
@@ -23,6 +25,7 @@ export class ExitComponent implements OnInit {
 
   buildTableStatic(data: string[]) {
     if(this.checkLength(data.length)) {
+
       let sizeRow = data.length === 9 ? 3 : (data.length / 2);
       let sizeColumn = data.length === 9 ? 3 : 2;
 
@@ -30,7 +33,7 @@ export class ExitComponent implements OnInit {
       return this.error = false;
     }
 
-    return this.error = true;
+    return this.error = true , this.navigateError();
   }
 
   buildTableRotation(data: string[]) {
@@ -115,30 +118,20 @@ export class ExitComponent implements OnInit {
        
         let row_data = document.createElement('td');
         row_data.innerHTML = isStatic ? this.data[index] : this.rotation[index];
-        row_data.setAttribute('id', 'table')
 
-
-        if(row_data.innerHTML !== 'undefined') {
-          // document.getElementById(nameBody)?.classList.add('table');
+        if(row_data.innerHTML !== 'undefined') {          
           row.appendChild(row_data);
         }
-
         index++;
-
       }
-
       tbody.appendChild(row);
-      const element = document.getElementById('table');
-
-      if(element !== null) {
-        element.style.border = '1px solid black';
-      
-    }
   }
 }
 
   navigateBack() {
     this.router.navigate(['']);
   }
-
+  navigateError(){
+    this.router.navigate(['error']);
+  }
 }
