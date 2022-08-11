@@ -29,4 +29,9 @@ describe('SharedDataService', () => {
 
     expect(service.values).toBe(data);
   });
+
+  it('should clearValue', () => {
+    service.clearValue();
+    expect(service.values).toEqual([]);
+  });
 });

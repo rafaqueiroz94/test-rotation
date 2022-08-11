@@ -16,6 +16,7 @@ export class SharedDataService {
   getValue() {
     return this.values;
   }
+  
   clearValue(){
     this.values = []
   }

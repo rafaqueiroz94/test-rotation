@@ -17,27 +17,24 @@ export class ErrorComponent implements OnInit {
  
   ngOnInit(): void {
     this.data = this.sharedDataService.getValue();
-    this.tips();
+    this.tipsText = this.message(this.data.length);
   }
 
-  tips(){
-    let i = this.data.length;
-    console.log(i);
-    if(i == 0){
-      this.tipsText = "Campo vazio! Insira algum valor."
+  message(value: number): string {
+    if(value > 9) {
+      return "Tente inserir uma quantidade de números, menor que 10, separados por vírgula Ex: 1,2,3,4,5,6,7,8,9"
     }
-    if(i==2 || i==3){
-      this.tipsText = "Tente inserir uma quantidade de números, maior que 03, separados por vírgula Ex: 1,2,3,4"
-    }
-    if(i==5 || i==7){
-      this.tipsText = "Tente inserir uma quantidade de números, que sejam múltiplos de 2 ou 3, separados por vírgula Ex: 1,2,3,4,5,6"
-    }
-    if(i>9){
-      this.tipsText = "Tente inserir uma quantidade de números, menor que 10, separados por vírgula Ex: 1,2,3,4,5,6,7,8,9"
-    }
+
+    return {
+      0: "Campo vazio! Insira algum valor.",
+      2: "Tente inserir uma quantidade de números, maior que 03, separados por vírgula Ex: 1,2,3,4",
+      3: "Tente inserir uma quantidade de números, maior que 03, separados por vírgula Ex: 1,2,3,4",
+      5: "Tente inserir uma quantidade de números, que sejam múltiplos de 2 ou 3, separados por vírgula Ex: 1,2,3,4,5,6",
+      7: "Tente inserir uma quantidade de números, que sejam múltiplos de 2 ou 3, separados por vírgula Ex: 1,2,3,4,5,6",
+    }[value] || '';
   }
   
-  navigateBack(){
+  navigateBack() {
     this.sharedDataService.clearValue();
     this.router.navigate(['']);
   }

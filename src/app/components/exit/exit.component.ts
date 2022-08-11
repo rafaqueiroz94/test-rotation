@@ -125,12 +125,14 @@ export class ExitComponent implements OnInit {
         index++;
       }
       tbody.appendChild(row);
+    }
   }
-}
 
   navigateBack() {
+    this.sharedDataService.clearValue();
     this.router.navigate(['']);
   }
+  
   navigateError(){
     this.router.navigate(['error']);
   }
