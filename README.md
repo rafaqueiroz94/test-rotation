@@ -59,12 +59,11 @@ R: Sim, utilizei esses dados abaixo:<br />
 1,2,3 <br />
 1,2,3,4 <br />
 1,2,3,4,5... seguindo ate 0,1,2,3,4,5,6,7,8,9,10 <br />
-
 555 <br />
 555,24 <br />
 26,333,999 <br />
 85,99,125,12548 <br />
 
-* Você escreveu teste unitário?
+* Você escreveu teste unitário?<br />
 R: Sim. realizei a criação dos testes unitarios. descrição de como obter o "coverage" mais acima, intitulada como: Executando testes unitarios
 
